@@ -4,8 +4,9 @@ function carregar() {
     var data = new Date();
     var hora = data.getHours();
     var minutos = data.getMinutes();
+    var segundos = data.getSeconds();
 
-    msg.innerHTML = `Agora são ${hora}:${minutos} horas.`;
+    msg.innerHTML = `Agora são ${hora}:${minutos}:${segundos} horas.`;
 
     if (hora >= 0 && hora < 12) {
         // bom dia 
@@ -25,5 +26,5 @@ function carregar() {
 // Chame a função para carregar a mensagem e imagem ao carregar a página
 carregar();
 
-// Atualize a cada minuto (60000 milissegundos)
-setInterval(carregar, 60000);
+// Atualize a cada segundo (1000 milissegundos)
+setInterval(carregar, 1000);
